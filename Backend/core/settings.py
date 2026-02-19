@@ -48,18 +48,8 @@ AUTH_USER_MODEL = 'accounts.User'
 
 
 AUTHENTICATION_BACKENDS = [
-    'accounts.backends.EmailBackend',  # your email login backend
     'django.contrib.auth.backends.ModelBackend',  # fallback
 ]
-
-
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'kyavawarashidah5@gmail.com'      # your Gmail email
-EMAIL_HOST_PASSWORD = 'shidah05'  # your 16-character App Password
-DEFAULT_FROM_EMAIL = 'kyavawarashidah5@gmail.com'   # can be same as host or no-reply@yourdomain.com
 
 
 REST_FRAMEWORK = {

@@ -30,5 +30,9 @@ class Role(models.Model):
 
 
 class User(AbstractUser):
+    email = models.EmailField(unique=True)
     business = models.ForeignKey(Business, on_delete=models.CASCADE, null=True, blank=True)
     role = models.ForeignKey(Role, on_delete=models.SET_NULL, null=True, blank=True)
+
+    USERNAME_FIELD = 'email'
+    REQUIRED_FIELDS = ['username']
